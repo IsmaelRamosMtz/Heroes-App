@@ -7,11 +7,7 @@ import { Heroe } from '../../interfaces/heroes.interfaces';
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',
-  styles: [`
-  mat-card {
-    margin-top: 20px;
-  }
-  `]
+  styles: []
 })
 export class ListadoComponent implements OnInit {
 
@@ -25,7 +21,7 @@ export class ListadoComponent implements OnInit {
     this._heroesService.obtenerHeroes()
     .subscribe( resp => {
       this.heroes = resp;
-      console.log(this.heroes);
+      // console.log(this.heroes);
     })
   }
 
